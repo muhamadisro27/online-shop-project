@@ -1,4 +1,5 @@
 import { prismaClient } from "../app/database";
+import { logger } from "../app/logging";
 import { ProductResponse, toProductResponse } from "../models/product-model";
 
 export class ProductRepository {
@@ -11,6 +12,9 @@ export class ProductRepository {
       },
     });
 
+    logger.info(products)
+
     return products;
   };
+
 }
