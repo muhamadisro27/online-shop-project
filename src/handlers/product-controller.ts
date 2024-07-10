@@ -8,7 +8,7 @@ export class ProductController {
     next: NextFunction
   ): Promise<void | Response<any, Record<string, any>>> => {
     try {
-      const products = await ProductService.getAllProducts();
+      const products = await ProductService.getAllProducts();  
 
       return res.json({
         code: 200,
